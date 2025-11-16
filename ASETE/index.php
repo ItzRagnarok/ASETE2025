@@ -107,7 +107,7 @@ $director = $_SESSION["filtros"]["director"] ?? "";
 </head>
 <body>
     <header>
-        <h1><?= $traducciones["title"] ?? "Filtrar Películas" ?></h1>
+        <h1><?= $traducciones["title"]?></h1>
 
         <div>
             <?= $traducciones["language"] ?>: 
@@ -121,9 +121,9 @@ $director = $_SESSION["filtros"]["director"] ?? "";
     <main>
     <form action="catalogo.php" method="GET" class="formulario">
         <div>
-            <label for="genero"><?= $traducciones["genero"] ?? "Género" ?>:</label>
+            <label for="genero"><?= $traducciones["genero"]?>:</label>
             <select name="genero" id="genero">
-                <option value="">-- <?= $traducciones["todos"] ?? "Todos" ?> --</option>
+                <option value="">-- <?= $traducciones["todos"]?> --</option>
                 <option value="Drama" <?= $genero === "Drama" ? "selected" : "" ?>>Drama</option>
                 <option value="Ciencia ficción" <?= $genero === "Ciencia ficción" ? "selected" : "" ?>>Ciencia ficción</option>
                 <option value="Fantasía" <?= $genero === "Fantasía" ? "selected" : "" ?>>Fantasía</option>
@@ -134,16 +134,16 @@ $director = $_SESSION["filtros"]["director"] ?? "";
         </div>
 
         <div>
-            <label for="anio"><?= $traducciones["anio"] ?? "Año" ?>:</label>
+            <label for="anio"><?= $traducciones["anio"]?>:</label>
             <input type="number" name="anio" id="anio" value="<?= htmlspecialchars($anio) ?>" placeholder="2020">
         </div>
 
         <div>
-            <label for="director"><?= $traducciones["director"] ?? "Director" ?>:</label>
+            <label for="director"><?= $traducciones["director"]?>:</label>
             <input type="text" name="director" id="director" value="<?= htmlspecialchars($director) ?>" placeholder="Nombre o parte del nombre">
         </div>
 
-        <button type="submit"><?= $traducciones["buscar"] ?? "Buscar" ?></button>
+        <button type="submit"><?= $traducciones["buscar"]?></button>
     </form>
 </main>
 

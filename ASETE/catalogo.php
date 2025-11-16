@@ -71,30 +71,30 @@ $resultados = array_filter($peliculas, function ($p) use ($genero, $anio, $direc
 <body>
 <header>
     <div class="top">
-        <h1>Catálogo de Películas</h1>
+        <h1><?= $traducciones["catPelis"]?></h1>
         <div style="margin-right:2em;">
             <?= $traducciones["language"] ?>: 
             <a href="?lang=es">ES</a> | 
             <a href="?lang=en">EN</a> &nbsp;  
             <label><?= $traducciones["usuario"] ?>: <?= htmlspecialchars($_SESSION["usuario"]) ?> |
-            <a class="csesion" href="logout.php">Cerrar sesión</a>
+            <a class="csesion" href="logout.php"><?= $traducciones["csesion"] ?></a>
         </div>
     </div>
 </header>
 <main>
     <p style="text-align:right; margin-bottom:1em;">
-    <a href="nueva_pelicula.php" style="background:#27ae60; color:white; padding:0.5em 1em; border-radius:4px; text-decoration:none;">+ Nueva película</a>
+    <a href="nueva_pelicula.php" style="background:#27ae60; color:white; padding:0.5em 1em; border-radius:4px; text-decoration:none;">+ <?= $traducciones["nPelicula"]?></a>
 </p>
 
     <?php if (count($resultados) > 0): ?>
         <p><strong><?= count($resultados) ?></strong> resultado(s) encontrado(s).</p>
         <table>
             <tr>
-                <th>Título</th>
-                <th>Género</th>
-                <th>Año</th>
-                <th>Director</th>
-                <th>Actores</th>
+                <th><?= $traducciones["titulo"]?></th>
+                <th><?= $traducciones["genero"]?></th>
+                <th><?= $traducciones["anio"]?></th>
+                <th><?= $traducciones["director"]?></th>
+                <th><?= $traducciones["actor"]?></th>
             </tr>
             <?php foreach ($resultados as $p): ?>
                 <tr>
@@ -110,7 +110,7 @@ $resultados = array_filter($peliculas, function ($p) use ($genero, $anio, $direc
         <p>No hay películas que cumplan los filtros seleccionados.</p>
     <?php endif; ?>
 
-    <a href="index.php">← Volver al filtrado</a>
+    <a href="index.php">← <?= $traducciones["vfiltrado"]?></a>
 </main>
 </body>
 </html>

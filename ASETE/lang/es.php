@@ -13,6 +13,15 @@
 		"anio" => "Año", 
 		"director" => "Director", 
 		"buscar" => "Buscar", 
-		"csesion" => "Cerrar sesión"
+		"csesion" => "Cerrar sesión", 
+		"titulo" => "Título", 
+		"genero" => "Género", 
+		"actor" => "Actores", 
+		"nPelicula" => "Nueva película", 
+		"vfiltrado" => "Volver al filtrado", 
+		"catPelis" => "Catálogo de Películas", 
+		"aniaPeli" => "Añadir película", 
+		"vCatalogo" => "Volver al catálogo", 
+		"select" => "Selecciona"
 	];
 ?>

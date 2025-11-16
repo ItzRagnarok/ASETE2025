@@ -127,29 +127,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
     <header>
-        <h1>Nueva Película</h1>
+        <h1><?= $traducciones["nPelicula"]?></h1>
         <div>
             <?= $traducciones["language"] ?>: 
             <a href="?lang=es">ES</a> | 
             <a href="?lang=en">EN</a> &nbsp;  
             <label><?= $traducciones["usuario"] ?>: <?= htmlspecialchars($_SESSION["usuario"]) ?> |
-            <a href="logout.php" style="color:#e74c3c; margin-left:1em;">Cerrar sesión</a>
+            <a href="logout.php" style="color:#e74c3c; margin-left:1em;"><?= $traducciones["csesion"] ?></a>
         </div>
     </header>
     <main>
         <form method="POST">
-            <label for="titulo">Título:</label>
+            <label for="titulo"><?= $traducciones["titulo"]?>:</label>
             <input type="text" name="titulo" id="titulo">
 
-            <label for="anio">Año:</label>
+            <label for="anio"><?= $traducciones["anio"]?>:</label>
             <input type="number" name="anio" id="anio">
 
-            <label for="director">Director:</label>
+            <label for="director"><?= $traducciones["director"]?>:</label>
             <input type="text" name="director" id="director">
 
-            <label for="genero">Género:</label>
+            <label for="genero"><?= $traducciones["genero"]?>:</label>
             <select name="genero" id="genero">
-                <option value="">-- Selecciona --</option>
+                <option value="">-- <?= $traducciones["select"]?> --</option>
                 <option value="Drama">Drama</option>
                 <option value="Ciencia ficción">Ciencia ficción</option>
                 <option value="Fantasía">Fantasía</option>
@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <option value="Biografía">Biografía</option>
             </select>
 
-            <button type="submit">Añadir película</button>
+            <button type="submit"><?= $traducciones["aniaPeli"] ?></button>
         </form>
 
         <?php if ($error): ?>
@@ -168,7 +168,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <?php endif; ?>
 
         <p style="text-align:center; margin-top:1em;">
-            <a href="catalogo.php">← Volver al catálogo</a>
+            <a href="catalogo.php">← <?= $traducciones["vCatalogo"] ?></a>
         </p>
     </main>
 </body>

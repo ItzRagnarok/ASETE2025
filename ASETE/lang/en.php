@@ -13,6 +13,14 @@
 		"anio" => "Year", 
 		"director" => "Director", 
 		"buscar" => "Search", 
-		"csesion" => "Sign out"
+		"csesion" => "Sign out",
+		"titulo" => "Title", 
+		"actor" => "Actors", 
+		"nPelicula" => "New film", 
+		"vfiltrado" => "Return to filtering", 
+		"catPelis" => "Movie Catalog", 
+		"aniaPeli" => "Add movie", 
+		"vCatalogo" => "Return to catalog", 
+		"select" => "Select"
 	];
 ?>
