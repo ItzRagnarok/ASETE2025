@@ -1,0 +1,30 @@
+
+version: "3.9"  #Versión de la sintaxis de docker-compose
+services:       #Definición de cada contenedor que vamos a levantar
+  web:          #Contenedor de Apache + PHP
+    image: php:8.2-apache  #Imagen de Docker que usaremos, la misma del ejemplo de clase
+    ports:
+      - "8080:80"        #Mapear el puerto 80 del contenedor al 8080 del PC
+    volumes:
+      - "C:/Users/Propietario/Desktop/ASETE/ASETE:/var/www/html"    #Carpeta local a carpeta raíz web
+  bbdd:           #Contenedor MySQL, con contraseña y base de datos inicial
+    image: mysql:5.7 #Imagen de Docker que usaremos para la BBDD
+    environment: 
+      MYSQL_ROOT_PASSWORD: bbddphp #Nombre de la BBDD y contraseña que queráis darle
+      MYSQL_DATABASE: bbddphp
+    volumes:
+      - db_data:/var/lib/mysql  #Aquí se guardan los datos de MySQL
+
+  bbddcliente: #Para abrir el phpMyAdmin como solíamos hacer en XAMPP
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: bbdd
+      PMA_USER: root
+      PMA_PASSWORD: bbddphp
+
+volumes:
+  db_data:
+
+  
