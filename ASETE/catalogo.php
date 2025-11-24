@@ -28,6 +28,7 @@ if (!isset($_SESSION["peliculas"])) {
 ]; 
 }
 
+
 //if(!isset($_SESSION))
 
 $peliculas = $_SESSION["peliculas"];
